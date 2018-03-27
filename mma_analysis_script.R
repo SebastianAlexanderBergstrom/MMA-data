@@ -1,6 +1,5 @@
 library(ggplot2)
 library(curl)
-# Upload the file functions.R and load it by using the source()-call below
 source("https://raw.githubusercontent.com/SebastianAlexanderBergstrom/MMA-data/master/mma_analysis_functions.R")
 
 # Data formating ----------------------------------------------------------
