@@ -11,7 +11,6 @@ mma_data_fightmetric = read.csv(curl("https://raw.githubusercontent.com/Sebastia
 # so you have approximately the same number of observations before the doping announcement as after and
 # so we use data approximately as far ahead in time as back.
 
-# Change 2011-10-30 to 2012-01-18
 mma_data_fightmetric_bounded = subset(mma_data_fightmetric, Date > as.Date("2012-01-18"))
 mma_data_fightmetric_bounded$Date = as.Date(mma_data_fightmetric_bounded$Date)
 mma_data_fightmetric_bounded$before_or_after_announcement = ifelse(mma_data_fightmetric_bounded$Date < as.Date("2015-02-18"),"Before","After")
