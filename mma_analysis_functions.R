@@ -113,12 +113,15 @@ outcomes_within_method_type <- function(type,data_frame){
   before_announcement = method_specific_data_frame[method_specific_data_frame$before_or_after_announcement == "Before",]
   after_announcement = method_specific_data_frame[method_specific_data_frame$before_or_after_announcement == "After",]
   ggplot()+
+    # Add stat="identity" in both geom_bar() calls
     geom_bar(data = before_announcement,
              aes(x = before_announcement$Method, y = (..count..)/sum(..count..),color="Before"),
              alpha=0.5,fill="blue",position="dodge")+
+    coord_flip()+
     geom_bar(data = after_announcement,
              aes(x = after_announcement$Method, y = (..count..)/sum(..count..),color="After"),
              alpha=0.5,fill="red",position="dodge")+
+    coord_flip()+
     scale_color_manual(name = "",values=c("Before" = "blue","After"="red"),guide="legend")+
     guides(colour=guide_legend(override.aes = list(fill=c("red","blue"))))+
     labs(fill = "Time period", x = paste0(type, " type"), y = "Percent", title = paste0("Relative frequency of ",type, " types"))
