@@ -7,4 +7,5 @@ The current code was used to get an idea if MMA in the UFC has changed since the
 
 https://sebastianbergstromsblog.wordpress.com
 
-Update April 6th 2018: Documentation for the functions in mma_analysis_functions.R is in the file.
+Update April 6th 2018: Documentation for the functions in mma_analysis_functions.R is in the file. For documentation I followed the Google style guide the best I could, see link below.
+https://google.github.io/styleguide/Rguide.xml#comments
